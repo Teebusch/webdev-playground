@@ -51,6 +51,15 @@
 
     <p>{count} doubled is {doubled}</p>
 
+    {#if count === 0}
+    <p>count is zero!</p>
+    {:else if count % 2 === 0}
+    <p>count is even!</p>
+    {:else}
+    <p>count is uneven!</p>
+    {/if}
+
+
     <button on:click={addNumber}>Add number</button>
 
     <p>{numbers.join(' + ')} = {sum}</p>
