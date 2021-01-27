@@ -1,6 +1,7 @@
 <script>
     import Nested from './Nested.svelte';
-    import Info from './Info.svelte'
+    import Info from './Info.svelte';
+    import Loops from './Loops.svelte';
 
     export let name;
     
@@ -40,9 +41,16 @@
         bar: 'one',
         baz: 'two'
     };
+
+    let mpos = {x: 0, y: 0};
+
+    function handleMousemove(event) {
+        mpos.x = event.clientX;
+        mpos.y = event.clientY;
+    }
 </script>
 
-<main>
+<main on:mousemove={handleMousemove}>
     <h1>Hello {name}!</h1>
     
     <button on:click={handleClick}>
@@ -69,6 +77,13 @@
 
     <Info bar={foo.bar}, baz={foo.baz}/>
     <Info {...foo}/>
+
+    <Loops/>
+
+    <p>The mouse position is {mpos.x}, {mpos.y}</p>
+
+    <!--button with inline event handler and 'once' modifier on handler -->
+    <button on:click|once="{e => alert('clicked')}">Click</button>
 </main>
 
 <style>
