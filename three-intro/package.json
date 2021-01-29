@@ -1,0 +1,19 @@
+{
+  "name": "three-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.125.1"
+  },
+  "devDependencies": {
+    "snowpack": "^3.0.11"
+  }
+}
