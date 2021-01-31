@@ -8,4 +8,6 @@ npm init
 npm i three
 npm i --save-dev snowpack
 npx snowpack
+
+npm run start
 ```

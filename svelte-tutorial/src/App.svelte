@@ -2,6 +2,8 @@
     import Nested from './Nested.svelte';
     import Info from './Info.svelte';
     import Loops from './Loops.svelte';
+    import DispatchWrapper from './DispatchWrapper.svelte';
+    import CustomButton from './CustomButton.svelte';
 
     export let name;
     
@@ -23,6 +25,10 @@
 
     function handleClick() {
         count += 1;
+    }
+
+    function handleMessage(event) {
+        alert(event.detail.text);   
     }
 
     // updating arrays
@@ -48,6 +54,13 @@
         mpos.x = event.clientX;
         mpos.y = event.clientY;
     }
+
+    let a = 1,
+        b = 1,
+        yes = false;
+
+    let menu = ['apples', 'pears', 'oranges'],
+        menuSelection = [];
 </script>
 
 <main on:mousemove={handleMousemove}>
@@ -80,10 +93,45 @@
 
     <Loops/>
 
-    <p>The mouse position is {mpos.x}, {mpos.y}</p>
-
+    <p>The mouse is at {mpos.x}, {mpos.y}</p>
+    
+    <!-- event handlers -->
     <!--button with inline event handler and 'once' modifier on handler -->
     <button on:click|once="{e => alert('clicked')}">Click</button>
+    <DispatchWrapper on:message={handleMessage} />
+    <CustomButton on:click="{e => alert('CLICKED!')}" />
+
+    <!-- instead of event handlers, one can bind values directly -->
+    <div>
+        <input bind:value={name}>
+    </div>
+
+    <label>
+        <input type="checkbox" bind:checked={yes}>
+        Please check.
+        {#if yes}
+            <span>Thank you!</span>
+        {/if}
+    </label>
+
+
+    <label>
+        <input type="number" bind:value={a} min=0 max=100>
+        <input type="range" bind:value={a} min=0 max=100>
+    </label>
+    <label><input type="number" bind:value={b} min=0 max=100></label>
+    <p>{a} * {b} = {a * b}</p>
+
+    <!-- use a 'multiple' binding -->
+  
+    <select multiple bind:value={menuSelection}>
+    {#each menu as flavour}
+    <option value={flavour}>{flavour}</option>
+    {/each}
+    </select>
+
+    <p>{menuSelection}</p>
+
 </main>
 
 <style>

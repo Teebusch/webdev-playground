@@ -9,25 +9,29 @@ hugo new theme xyz
 add theme to config.toml
 mkdir -p themes/xyz/assets/css/  // p flag  to create nonexisting dirs
 
-
 npm init
 npm i --save-dev postcss@latest postcss-cli@latest // required for postcss
-npm i --save-dev autoprefixer@latest tailwindcss@latest  
+npm i --save-dev autoprefixer@latest tailwindcss@latest 
 
 // configure postcss plugins
 
 cd themes/xyz/assets/css/
 npx tailwindcss init -p
 touch styles.scss  // sass file
-```
 
-add these tailwind imports to styles.scss
+// add purging patterns to tailwind.config.js
 
-```
+"./layouts/**/*.html", "./content/**/*.md", "./content/**/*.html"
+
+// add these tailwind imports to styles.scss:
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 ```
+
+
+## Build Locally:
 
 ```
 hugo server -D
