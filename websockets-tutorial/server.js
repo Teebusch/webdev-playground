@@ -1,25 +1,27 @@
 // This is the server-side code 
 
-const express = require('express');
-const socket = require('socket.io');
+const express  = require('express');
+const socketio = require('socket.io');
+const path     = require('path');
+
+const PORT     = 4000 || process.env.PORT;
+
 
 // App setup 
 
-const app = express();
+const app  = express();
 
-const PORT = 4000 || process.env.PORT;
-
-var server = app.listen(PORT, () => { 
+const server = app.listen(PORT, () => { 
     console.log(`App listening to requests on port ${PORT}`);
 });
 
-// Static files
+// static files 
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static('public'))
 
 // Socket setup
 
-var io = socket(server);
+const io = socketio(server);
 
 io.on('connection', (socket) => {
     console.log(`Socket connection established with id ${socket.id}`);

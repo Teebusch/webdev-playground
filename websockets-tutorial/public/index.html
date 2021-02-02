@@ -9,17 +9,17 @@
         <link rel="stylesheet" href="/styles.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.0/socket.io.js" integrity="sha512-+l9L4lMTFNy3dEglQpprf7jQBhQsQ3/WvOnjaN/+/L4i0jOstgScV0q2TjfvRF4V+ZePMDuZYIQtg5T4MKr+MQ==" crossorigin="anonymous"></script>
     </head>
-    <body class="p-4 text-gray-800">
-            <h1 class="text-5xl">Websockets Chat</h1>
+    <body class="p-8 min-h-screen bg-gray-100 text-gray-800">
+            <h1 class="text-6xl my-8">Websockets Chat</h1>
             <div class="h-screen">
                 <div id="chat-window">
                     <div id="output"></div>
                 </div>
                 <div id="feedback"></div>
-                <div id="input" class="object-bottom">
-                    <input id="handle" type="text" placeholder="Handle" />
-                    <input id="message" type="text" placeholder="Message" />
-                    <button id="btn-send">Send</button>
+                <div id="input" class="h-10 mt-8 flex items-center">
+                    <input id="handle" type="text" placeholder="Handle" class="shadow-inner rounded px-4 py-2 border-solid border-2 border-grey-800" />
+                    <input id="message" type="text" placeholder="Message" class="shadow-inner rounded px-4 py-2 border-solid border-2 border-grey-800" />
+                    <button id="btn-send" class="text-white shadow px-4 py-2 bg-pink-600 hover:bg-pink-800 rounded">Send</button>
                 </div>
             </div>          
         <script src="/chat.js" async defer></script>

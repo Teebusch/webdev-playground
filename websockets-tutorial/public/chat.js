@@ -11,10 +11,13 @@ var output   = document.getElementById('output'),
 // emit events
 
 btn.addEventListener('click', function() {
-    socket.emit('chat', {
-        handle: handle.value,
-        message: message.value
-    });
+    if (message.value && handle.value) {
+        socket.emit('chat', {
+            handle: handle.value,
+            message: message.value
+        });
+        message.value = '';
+    }
 });
 
 message.addEventListener('keypress', function() {
@@ -24,7 +27,7 @@ message.addEventListener('keypress', function() {
 // listen for events
 
 socket.on('chat', function(data) {
-    output.innerHTML += `<p><strong>${data.handle}</strong> ${data.message}</p>`
+    output.innerHTML += `<div><p class="ml-6 mt-4 mb-2"><strong>${data.handle}</strong></p><p class="inline-block rounded-full bg-white px-6 py-3 mb-4">${data.message}</p></div>`
     feedback.innerHTML = '';
 })
 

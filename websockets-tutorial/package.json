@@ -1,10 +1,11 @@
 {
-  "name": "websockets-tutorial",
+  "name": "websockets",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon index",
+    "start": "node server",
+    "dev": "nodemon server",
     "build-css": "tailwindcss build src/styles.css -o public/styles.css"
   },
   "author": "Tobias Busch",
