@@ -9,19 +9,29 @@
         <link rel="stylesheet" href="/styles.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.0/socket.io.js" integrity="sha512-+l9L4lMTFNy3dEglQpprf7jQBhQsQ3/WvOnjaN/+/L4i0jOstgScV0q2TjfvRF4V+ZePMDuZYIQtg5T4MKr+MQ==" crossorigin="anonymous"></script>
     </head>
-    <body class="p-8 min-h-screen bg-gray-100 text-gray-800">
-            <h1 class="text-6xl my-8">Websockets Chat</h1>
-            <div class="h-screen">
-                <div id="chat-window">
+    <body class="min-h-screen bg-gray-100 text-gray-800">
+        <div class="flex flex-wrap h-screen">
+            <nav class="bg-gray-300 p-8">
+                <h1 class="text-4xl mt-8">Websockets Chat</h1>
+                <ul class="py-8">
+                    <li class="rounded-full bg-gray-200 px-4 py-2 my-2">room 1</li>
+                    <li>room 2</li>
+                </ul>
+                <input type="text" />
+                <button class="text-white shadow px-4 py-2 bg-pink-600 hover:bg-pink-800 rounded">Create</button>
+            </nav>
+            <main class="p-8">
+                <div id="chat-window" class="">
                     <div id="output"></div>
                 </div>
                 <div id="feedback"></div>
-                <div id="input" class="h-10 mt-8 flex items-center">
+                <div id="input" class="fixed h-10 mt-8 flex items-center">
                     <input id="handle" type="text" placeholder="Handle" class="shadow-inner rounded px-4 py-2 border-solid border-2 border-grey-800" />
                     <input id="message" type="text" placeholder="Message" class="shadow-inner rounded px-4 py-2 border-solid border-2 border-grey-800" />
                     <button id="btn-send" class="text-white shadow px-4 py-2 bg-pink-600 hover:bg-pink-800 rounded">Send</button>
-                </div>
-            </div>          
+                </div>   
+            </main>
+        </div> 
         <script src="/chat.js" async defer></script>
     </body>
 </html>
