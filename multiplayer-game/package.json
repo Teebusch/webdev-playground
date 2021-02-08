@@ -1,20 +1,26 @@
 {
   "name": "multiplayer-game",
   "version": "1.0.0",
-  "description": "*Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*",
+  "description": "A multiplayer game platform with rooms for simultaneous games",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app"
+    "start": "node app",
+    "client": "npm run dev --prefix client",
+    "server": "nodemon app --ignore 'client/''",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
-  "author": "",
+  "author": "Tobias Busch",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^5.3.0",
     "nodemon": "^2.0.7"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.11.15"
+    "mongoose": "^5.11.15",
+    "morgan": "^1.10.0"
   }
 }
