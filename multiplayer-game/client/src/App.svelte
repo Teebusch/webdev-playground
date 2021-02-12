@@ -10,7 +10,13 @@
     });
 </script>
 
-<main>
-	<h1>Hello</h1>
+<main class="bg-gray-300">
+	<h1 class="text-lg">Hello</h1>
     { JSON.stringify(users) }
 </main>
+
+<style global>
+    @import 'tailwindcss/base';
+    @import 'tailwindcss/components';
+    @import 'tailwindcss/utilities';
+  </style>
