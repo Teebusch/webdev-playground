@@ -12,8 +12,11 @@ module.exports = {
 	],
 	rehypePlugins: [
 		require("rehype-slug"),
-		[require("rehype-autolink-headings"), {
-			behavior: "wrap",
-		}],
+		// [require("rehype-autolink-headings"), {
+		// 	behavior: "wrap",
+		// }],
 	],
+  layout: {
+    blog: "/src/lib/mdsvex-layouts/layout-blog.svelte"
+  }
 };

@@ -3,14 +3,15 @@
   import "./../styles/prism.css";
 </script>
 
-<header class="sticky top-0 z-50">
-  <nav class="w-full flex items-center justify-between mt-0 px-6 py-3">
-    <a href=".">Home</a>
-    <a href="blog">Blog</a>
-    <a href="about">About</a>
-  </nav>
-</header>
-
-<main class="relative mx-auto">
-  <slot />
-</main>
+<div class="bg-grey-50">
+  <header class="fixed top-0 z-10">
+    <nav class="relative w-full flex items-start px-6 py-6">
+      <a href="/" class="text-2xl text-pink-500 filter grayscale transform hover:scale-150 hover:filter transition duration-300">🍄</a>
+    </nav>
+  </header>
+  
+  <main class="relative grid content-start justify-center x-auto bg-grey-50 min-w-full min-h-screen z-0">
+    <slot />
+  </main>
+</div>
+-

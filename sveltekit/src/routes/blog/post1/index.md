@@ -1,8 +1,12 @@
+---
+title: My first post
+slug: post1
+date: 21. 10. 2021
+---
+
 **Note that despite this file having an md extension, it can support all Svelte language features (like scripting). Do not import untrusted or user-created markdown files.**
 
 *This markdown sample was taken from [here](https://gist.github.com/rt2zz/e0a1d6ab2682d2c47746950b84c0b6ee).*
-
-# An h1 header
 
 Paragraphs are separated by a blank line.
 

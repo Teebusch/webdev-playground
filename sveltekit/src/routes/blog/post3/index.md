@@ -1,4 +1,8 @@
-# Header Level 1
+---
+title: Another post
+slug: post3
+date: 21. 10. 2021
+---
 
 "smartypants" --- does it work?
 
