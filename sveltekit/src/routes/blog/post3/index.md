@@ -1,5 +1,5 @@
 ---
-title: Another post
+title: Goodbye Hugo, hello Svelte! A blogpost like so many.
 slug: post3
 date: 21. 10. 2021
 ---

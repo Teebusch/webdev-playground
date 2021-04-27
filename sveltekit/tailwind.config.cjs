@@ -17,12 +17,12 @@ module.exports = {
     fontFamily: {
       ...fontFamily,
       sans: ['"Plein"', 'ui-sans-serif', 'system-ui'],
-      serif: ['Merriweather', 'ui-serif'],
+      serif: ['Yesteryear', 'ui-serif'],
     },
 		extend: {
       fontSize: {
         '10xl': '10rem',
-        'xxl': '28rem',
+        'xxl': '25rem',
       },
       typography: {
         DEFAULT: {

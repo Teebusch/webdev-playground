@@ -1,12 +1,9 @@
 ---
-title: My first post
+title: Giving coffee  another chance. How I had a great tea party.
 slug: post1
 date: 21. 10. 2021
 ---
 
-**Note that despite this file having an md extension, it can support all Svelte language features (like scripting). Do not import untrusted or user-created markdown files.**
-
-*This markdown sample was taken from [here](https://gist.github.com/rt2zz/e0a1d6ab2682d2c47746950b84c0b6ee).*
 
 Paragraphs are separated by a blank line.
 
@@ -29,6 +26,9 @@ Use 3 dashes for an em-dash. Use 2 dashes for ranges (ex., "it's all
 in chapters 12--14"). Three dots ... will be converted to an ellipsis.
 Unicode is supported. ☺
 
+This markdown sample was taken from [here](https://gist.github.com/rt2zz/e0a1d6ab2682d2c47746950b84c0b6ee).
+
+**Note that despite this file having an md extension, it can support all Svelte language features (like scripting). Do not import untrusted or user-created markdown files.**
 
 ## An h2 header
 

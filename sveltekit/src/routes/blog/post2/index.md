@@ -1,5 +1,5 @@
 ---
-title: A post with a rather long title
+title: A post with a rather long title - quite long
 slug: post2
 date: 21. 10. 2021
 ---
