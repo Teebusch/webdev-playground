@@ -1,6 +1,9 @@
 <script>
 	import "../app.postcss";
   import "./../styles/prism.css";
+  import Navbar from "../lib/Navbar.svelte";
+
+  let open = true;
 </script>
 
 <div class="bg-grey-50">
@@ -16,6 +19,8 @@
         <a href="/#contact"  class="">Contact</a>
       </nav>
     </div>
+
+    <Navbar bind:open />
   </header>
   
   <main class="relative bg-grey-50 max-w-screen min-h-screen z-0">
