@@ -1,7 +1,7 @@
+
 <script>
 	import "../app.postcss";
   import "./../styles/prism.css";
-  import Navbar from "../lib/Navbar.svelte";
 
   let open = true;
 </script>
@@ -14,13 +14,12 @@
     <div class="z-10 absolute h-1/4">
       <nav class="sticky top-6 flex flex-row gap-7 justify-around ml-20">
         <a href="/"  class="font-bold">tobiasbusch.xyz</a>
-        <a href="/#bio"  class="">Bio</a>
+        <!-- <a href="/#bio"  class="">Bio</a>
         <a href="/#blog"  class="">Blog</a>
-        <a href="/#contact"  class="">Contact</a>
+        <a href="/#contact"  class="">Contact</a> -->
       </nav>
     </div>
 
-    <Navbar bind:open />
   </header>
   
   <main class="relative bg-grey-50 max-w-screen min-h-screen z-0">

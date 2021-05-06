@@ -1,3 +1,30 @@
+<script context="module">
+  import { base } from '$app/paths';
+
+  export async function load({ page, fetch, session, context }) {
+    const url = `${base}/blog/posts.json`;
+    const res = await fetch(url);
+
+    if(res.ok) {
+      return { 
+        props: { 
+          posts: await res.json() 
+        }
+      };
+    } else {
+      return { 
+        props: { 
+          posts: [{slug: "bla", title: "bla", date: "bla"}] 
+        }
+      };
+    }
+  }
+</script>
+
+<script>
+  export let posts = [];
+</script>
+
 <section id="blog" class="my-10 py-10 mx-auto w-full max-w-screen-lg min-h-screen scroll-snap-start">
   
   <div class="flex gap-8">
@@ -30,7 +57,7 @@
 
     </div>
 
-    <div class="w-1/2 col-span-1">
+    <div class="w-1/2 col-span-1" style="">
         <img src="https://source.unsplash.com/random/500x600/" alt="" class="rounded-md my-8 sticky top-1/3 shadow-lg">
     </div>
   </div>

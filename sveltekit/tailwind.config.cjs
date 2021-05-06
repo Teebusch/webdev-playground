@@ -6,14 +6,6 @@ module.exports = {
 		"./src/**/*.{html,js,svelte,ts}",
 	],
 	theme: {
-    // spacing: {
-    //   '1': '10px',
-    //   '2': '20px',
-    //   '3': '40px',
-    //   '4': '32px',
-    //   '5': '42px',
-    //   '6': '64px',
-    // },
     fontFamily: {
       ...fontFamily,
       sans: ['"Plein"', 'ui-sans-serif', 'system-ui'],

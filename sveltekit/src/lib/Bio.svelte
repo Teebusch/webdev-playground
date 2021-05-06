@@ -1,3 +1,7 @@
+<script>
+  let biography = ["Childhood", "Language", "Brain", "PhD", "Norway", "Today"]
+</script>
+
 <section id="bio" class="max-w-screen my-20 py-20 scroll-snap-start">
   <div class="flex flex-wrap max-w-screen-lg mx-auto gap-6">
     <h2 class="text-6xl text-gray-800 flex-shrink-0">
