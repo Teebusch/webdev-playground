@@ -26,6 +26,10 @@
   import Greeting from '$lib/Greeting.svelte'
   import BlogSummary from '$lib/BlogSummary.svelte'
 
+  import { base, assets } from '$app/paths';
+
+  console.log( "hello", assets )
+
   export let posts = [];
 </script>
 

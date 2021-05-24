@@ -1,8 +1,7 @@
 <script>
 
   const updatePreview = function(post) {
-    previewImage = `/blog/${post.slug}/hero.jpg`
-    console.log(previewImage)
+    previewImage = `/hero1.jpg`
   }
 
   let previewImage = "https://source.unsplash.com/random/500x600/"
